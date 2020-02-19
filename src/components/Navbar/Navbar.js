@@ -1,33 +1,39 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Nav, NavDropdown } from "react-bootstrap";
-import Navbar from 'react-bootstrap/Navbar'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-export default function NavBar() {
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
+export default function ButtonAppBar() {
+  const classes = useStyles();
+
   return (
-    <Navbar id='navBarMain' collapseOnSelect expand='lg' bg='dark' variant='dark'>
-      <Navbar.Brand>
-        <NavLink to='/home'>
-        </NavLink>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls='responsive-navbar-nav' id='dropdownToggle' />
-      <Navbar.Collapse id='responsive-navbar-nav nav-link'>
-          <Nav className='mr-auto'>
-            <Navbar.Text>Signed in as: <a href='/profile'></a>
-            </Navbar.Text>
-          </Nav>
-        <Nav>
-          <Navbar.Text>
-            <NavLink to='/home'>Home</NavLink>
-          </Navbar.Text>
-          <NavDropdown title='My Account' id='collapsible-nav-dropdown'>
-            <NavDropdown.Item as={NavLink} to='/help'>Help</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/profile'>Account Details</NavDropdown.Item>
-            <NavDropdown.Divider />
-              <NavDropdown.Item as={NavLink} to='/logout' onClick>Logout</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            News
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 }
