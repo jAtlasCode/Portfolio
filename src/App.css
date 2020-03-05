@@ -1,26 +1,90 @@
 .App {
+  display: flex;
   text-align: center;
-  align-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #4b4b4b;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
 }
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.Intro {
+  display: flex;
+  height: 100vh;
+  width: 97vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+
+
+  color: white;
+  background-color: rgb(49, 49, 49);
+}
+
+.NavButtons {
+  /* padding-top: 5%; */
+}
+
+
+.IntroContent {
+  margin-top: 30vh;
+}
+
+.About {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* padding-top: 20%; */
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  height: 100vh;
+  width: 97vw;
+  color:white;
+  background-color: rgb(49, 49, 49);
+  /* padding-bottom: 20%; */
+}
+
+.AboutMe {
+  text-align: center;
+  line-height: 1.5em;
+  margin-left: 33vw;
+}
+
+.AboutMe p {
+  width: 30vw;
+}
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  height: 100vh;
+  width: 97vw;
+  color: white;
+  background-color: rgb(49, 49, 49);
+  /* padding-bottom: 20%; */
+}
+
+.ProfessionalProjects {
+  align-self: center;
+}
+
+.MuiButton-label {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiIconButton-label {
+  color: cyan;
 }
 
-/* css */
-html {
-  scroll-behavior: smooth;
+.MuiButton-root:hover {
+  color:rgb(49, 49, 49);
 }
