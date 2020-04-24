@@ -1,6 +1,7 @@
 .App {
   display: flex;
   text-align: center;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -70,21 +71,45 @@ html {
   width: 97vw;
   color: white;
   background-color: rgb(49, 49, 49);
+  /* background-color: black; */
   /* padding-bottom: 20%; */
 }
 
 .ProfessionalProjects {
-  align-self: center;
+  /* align-self: center; */
 }
+
+.ProProjectContent {
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /* background-color: bisque; */
+}
+
 
 .MuiButton-label {
   color: white;
 }
 
-.MuiIconButton-label {
+.NavButtons .MuiIconButton-label {
   color: cyan;
 }
 
 .MuiButton-root:hover {
   color:rgb(49, 49, 49);
+}
+
+
+
+@media (max-width: 768px) {
+  .ProProjectContent {
+    flex-direction: column;
+  }
+}
+
+
+.Projects ul {
+  text-align: left;
 }
