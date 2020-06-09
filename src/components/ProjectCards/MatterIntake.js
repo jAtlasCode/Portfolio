@@ -74,6 +74,7 @@ export default function MatterIntake() {
         />
         <CardMedia
           className={classes.media}
+          id="matterIntakeMedia"
           image={MitPhoto}
           title="Matter Intake Tool"
         />

@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 400,
     minWidth: 350,
     maxHeight: 400,
+    minHeight: 400,
     marginTop: '1%'
   },
   gridItem: {
@@ -55,7 +56,7 @@ export default function LegalHub() {
 
   return (
     <>
-    <Card className={classes.root} id="LegalHubCard">
+    <Card className={classes.root} id="legalHubCard">
           <CardHeader
             // action={
             // }

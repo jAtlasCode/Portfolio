@@ -131,7 +131,24 @@ html {
       text-align: center;
     }
     .Projects {
-      height: 250vh;
+      height: 300vh;
+      /* display: flex; */
+      /* justify-content: center; */
+    }
+    .ProProjectContent {
+      display: flex;
+      height: 1200px;
+    }
+    #matterIntakeMedia {
+      padding-top: 0%;
+      height: 200px;
+    }
+    #matterIntakeCard {
+      /* padding-bottom: 5; */
+    }
+    #legalHubCard {
+      height: 400px;
+      /* padding-top: 5%; */
     }
 
     #matterIntake {
