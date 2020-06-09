@@ -17,6 +17,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 400,
+    minWidth: 350,
     maxHeight: 400,
     marginTop: '1%'
   },
@@ -68,7 +69,7 @@ export default function LegalHub() {
           />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
-              Website made using React. Website made using React. Website made using React.
+              Website made using React.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>

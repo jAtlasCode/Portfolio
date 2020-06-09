@@ -23,8 +23,6 @@ html {
   align-content: center;
   justify-content: center;
   text-align: center;
-
-
   color: white;
   background-color: rgb(49, 49, 49);
 }
@@ -103,11 +101,43 @@ html {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 740px) {
   .ProProjectContent {
     flex-direction: column;
   }
-}
+  .Intro {
+    height: 120vh;
+  }
+  .AboutMe {
+    width: 100vw;
+    height: 90vh;
+    margin-left: 3%;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* word-wrap: normal; */
+  }
+  .AboutMe p {
+    width: 90vw;
+    height: 100vh;
+  }
+  .App {
+    height: 100%;
+    align-items: center;
+    }
+    p {
+      text-align: center;
+    }
+    .Projects {
+      height: 250vh;
+    }
+
+    #matterIntake {
+      /* height: 300px; */
+    }
+  }
 
 
 .Projects ul {
