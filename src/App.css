@@ -39,26 +39,60 @@ html {
 .About {
   display: flex;
   flex-direction: column;
-  /* padding-top: 20%; */
-  text-align: center;
-  justify-content: center;
-  align-content: center;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
   height: 100vh;
   width: 97vw;
-  color:white;
+  color: white;
   background-color: rgb(49, 49, 49);
-  /* padding-bottom: 20%; */
 }
 
 .AboutMe {
-  text-align: center;
+  display: flex;
+  /* text-align: center; */
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 60vw;
   line-height: 1.5em;
-  margin-left: 33vw;
 }
 
 .AboutMe p {
-  width: 30vw;
+  width: 40vw;
 }
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 45vh;
+  align-content: center;
+  /* background-color: darkcyan; */
+}
+
+.SkillsContent {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.SkillsList {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  line-height: 2rem;
+  /* background-color: darkgreen; */
+}
+
+hr {
+  width: 45%;
+}
+
+
 
 .Projects {
   display: flex;
@@ -96,7 +130,7 @@ html {
 }
 
 .MuiButton-root:hover {
-  color:rgb(49, 49, 49);
+  color: rgb(49, 49, 49);
 }
 
 
@@ -105,9 +139,11 @@ html {
   .ProProjectContent {
     flex-direction: column;
   }
+
   .Intro {
     height: 120vh;
   }
+
   .AboutMe {
     width: 100vw;
     height: 90vh;
@@ -119,42 +155,50 @@ html {
     align-content: center;
     /* word-wrap: normal; */
   }
+
   .AboutMe p {
     width: 90vw;
     height: 100vh;
   }
+
   .App {
     height: 100%;
     align-items: center;
-    }
-    p {
-      text-align: center;
-    }
-    .Projects {
-      height: 300vh;
-      /* display: flex; */
-      /* justify-content: center; */
-    }
-    .ProProjectContent {
-      display: flex;
-      height: 1200px;
-    }
-    #matterIntakeMedia {
-      padding-top: 0%;
-      height: 200px;
-    }
-    #matterIntakeCard {
-      /* padding-bottom: 5; */
-    }
-    #legalHubCard {
-      height: 400px;
-      /* padding-top: 5%; */
-    }
-
-    #matterIntake {
-      /* height: 300px; */
-    }
   }
+
+  p {
+    text-align: center;
+  }
+
+  .Projects {
+    height: 300vh;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+
+  .ProProjectContent {
+    display: flex;
+    height: 1200px;
+  }
+
+  #matterIntakeMedia {
+    padding-top: 0%;
+    height: 200px;
+  }
+
+  #matterIntakeCard {
+    /* padding-bottom: 5; */
+  }
+
+  #legalHubCard {
+    height: 400px;
+    /* padding-top: 5%; */
+  }
+
+  #matterIntake {
+    /* height: 300px; */
+  }
+}
 
 
 .Projects ul {
