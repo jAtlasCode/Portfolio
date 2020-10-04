@@ -1,33 +1,36 @@
 import React, { useRef } from "react";
 import "./App.css";
-import { MemoryRouter as Router } from "react-router";
-// import { Link as RouterLink } from "react-router-dom";
+import { MemoryRouter as Router, Route } from "react-router";
 import { Button, Grid, IconButton } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MatterIntake from "./components/ProjectCards/MatterIntake";
 import LegalHub from "./components/ProjectCards/LegalHub";
 import { useStateValue } from "./state";
 import EmailIcon from "@material-ui/icons/Email";
+import { Link, Switch } from "react-router-dom";
+import Pdf from "./docs/Resume.pdf";
+
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
-const useStyles = makeStyles((theme) => ({
-  gridItem: {
-    height: "100%",
-  },
-  gridContainer: {
-    height: "100%",
-    marginTop: "5vh",
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   gridItem: {
+//     height: "100%",
+//   },
+//   gridContainer: {
+//     height: "100%",
+//     marginTop: "5vh",
+//   },
+// }));
 
 function App() {
   const [{ theme }, dispatch] = useStateValue();
 
-  const classes = useStyles();
+  // const classes = useStyles();
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const resumeRef = useRef(null);
 
   // console.log(theme.font)
   // console.log(theme.font.constructor.name)
@@ -40,10 +43,10 @@ function App() {
     scrollToRef(projectsRef);
   };
 
-  const handle = () => {
-    dispatch({ type: "editTheme", theme: { mode: "dark" } });
-    console.log(theme);
-  };
+  // const handle = () => {
+  //   dispatch({ type: "editTheme", theme: { mode: "dark" } });
+  //   console.log(theme);
+  // };
 
   return (
     <>
@@ -99,11 +102,9 @@ function App() {
                   experiences, but hearing <strong>others </strong>
                   complaints of these experiences. This inspired me to create
                   applications that people find <strong>enjoyable </strong>
-                  and <strong>intuitive </strong> to use.
-                </p>
-                <p>
-                  I hope you enjoy my portfolio, and if you would like to
-                  contact me, feel free to use the provided methods!
+                  and <strong>intuitive </strong> to use. <br /> <br />I hope
+                  you enjoy my portfolio, and if you would like to contact me,
+                  feel free to use the provided methods!
                 </p>
               </div>
             </div>
@@ -115,16 +116,16 @@ function App() {
                 <div className="SkillsList">
                   <div>
                     <div>
-                      <strong>{"> Programming Languages: "}</strong>JavaScript,
-                      C#, Java, Python
+                      <strong>{"> Programming Languages: "}</strong>
+                      JavaScript, C#, Java, Python
                     </div>
                     <div>
                       <strong>{"> Libraries & Frameworks: "}</strong>React.js,
                       Node.js, Express.js{" "}
                     </div>
                     <div>
-                      <strong>{"> Database Technologies: "}</strong>PostgreSQL,
-                      MySQL, SQL, MongoDB, Firebase
+                      <strong>{"> Database Technologies: "}</strong>
+                      PostgreSQL, MySQL, SQL, MongoDB, Firebase
                     </div>
                     <div>
                       <strong>{"> DevOps: "}</strong>AWS, Azure, Netlify
@@ -150,8 +151,8 @@ function App() {
             <div className="ProfessionalProjects">
               <h2>Professional Projects</h2>
               <div className="ProProjectContent">
-                <MatterIntake />
-                <LegalHub />
+                {/*<MatterIntake />
+                <LegalHub /> */}
               </div>
             </div>
             <div className="PersonalProjects">
@@ -164,7 +165,23 @@ function App() {
               ></Grid>
             </div>
           </div>
-          <div className="Footer"></div>
+          <div className="Footer">
+            <div className="FooterLinks">
+              <IconButton href="https://www.linkedin.com/in/joseph-atlas/">
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton href="https://github.com/jAtlasCode">
+                <GitHubIcon />
+              </IconButton>
+              <IconButton href="mailto:joeyatlas27@gmail.com">
+                <EmailIcon />
+              </IconButton>
+              <Button onClick={() => window.open(Pdf)}>Résumé</Button>
+            </div>
+            <div className="FooterText">
+              © Joseph Atlas | All Rights Reserved.
+            </div>
+          </div>
         </div>
       </Router>
     </>

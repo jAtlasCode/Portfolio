@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #4b4b4b;
+  background-color: rgb(49, 49, 49);
   overflow: hidden;
 }
 
@@ -54,7 +54,7 @@ html {
   flex-direction: column;
   align-items: center;
   height: 50vh;
-  width: 60vw;
+  width: 60%;
   line-height: 1.5em;
 }
 
@@ -120,6 +120,29 @@ hr {
   /* background-color: bisque; */
 }
 
+.Projects ul {
+  text-align: left;
+}
+
+.Footer {
+  color: white;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  flex-direction: column;
+  background-color: rgb(34, 34, 34);
+}
+
+.FooterLinks {
+  display: flex;
+  height: 70%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.FooterText {
+  height: 30%;
+}
 
 .MuiButton-label {
   color: white;
@@ -129,45 +152,76 @@ hr {
   color: cyan;
 }
 
+.Footer .MuiIconButton-label {
+  color: white;
+}
+
+.Footer .MuiButton-label {
+  color: white;
+}
+
+.Footer .MuiIconButton-label:hover {
+  color: cyan;
+}
+
+.Footer .MuiButton-label:hover {
+  color: cyan;
+}
+
 .MuiButton-root:hover {
   color: rgb(49, 49, 49);
 }
 
-
+.NavButtons .MuiButton-label:hover {
+  color: cyan;
+}
 
 @media (max-width: 740px) {
-  .ProProjectContent {
-    flex-direction: column;
+  .App {
+    height: 100%;
+    align-items: center;
   }
 
   .Intro {
     height: 120vh;
   }
 
+  .About {
+    height: 170vh;
+    width: 97%;
+    flex-direction: column;
+  }
+
   .AboutMe {
-    width: 100vw;
-    height: 90vh;
-    margin-left: 3%;
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    /* word-wrap: normal; */
+    width: 100%;
+    height: 55%;
+    /* margin-left: 3%; */
+    /* text-align: left; */
+    /* background-color: cyan; */
   }
 
   .AboutMe p {
-    width: 90vw;
-    height: 100vh;
+    display: inline-block;
+    width: 100%;
   }
 
-  .App {
-    height: 100%;
-    align-items: center;
+  hr {
+    width: 95%;
   }
 
-  p {
-    text-align: center;
+  .Skills {
+    height: 35%;
+    width: 97%;
+    flex-direction: column;
+    /* background-color: darkblue; */
+  }
+
+  .SkillsContent {
+    height: 50%;
+  }
+
+  .ProProjectContent {
+    flex-direction: column;
   }
 
   .Projects {
@@ -198,9 +252,4 @@ hr {
   #matterIntake {
     /* height: 300px; */
   }
-}
-
-
-.Projects ul {
-  text-align: left;
 }
