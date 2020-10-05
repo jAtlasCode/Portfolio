@@ -189,26 +189,22 @@ html {
   background-color: rgb(49, 49, 49);
 }
 
-.AboutMe {
+.Bio {
   display: flex;
-  /* text-align: center; */
+  text-align: left;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   height: 50%;
-  width: 60vw;
-  line-height: 1.5em;
-}
-
-.AboutMe p {
   width: 40vw;
+  line-height: 1.5em;
 }
 
 .Skills {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  height: 45vh;
-  align-content: center;
+  height: 45%;
+  justify-content: flex-start;
   /* background-color: darkcyan; */
 }
 
@@ -216,7 +212,7 @@ html {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  justify-content: center;
+  /* justify-content: center; */
   width: 100%;
   height: 100%;
 }
@@ -230,7 +226,7 @@ html {
 }
 
 hr {
-  width: 45%;
+  width: 100%;
 }
 
 .Projects {
@@ -248,9 +244,7 @@ hr {
 
 .ProProjectContent {
   display: flex;
-  /* height: 200%; */
-  /* background-color: black; */
-  /* width: 80vw; */
+  margin-top: 3%;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -276,6 +270,48 @@ hr {
 .Projects ul {
   text-align: left;
 }
+
+
+
+/* 
+@media (max-width: 1100px) {
+  .Projects {
+    height: 300vh;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
+  }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AboutMe {
+    width: 80vw;
+  }
+
+  .AboutMe p {
+    width: 80vw;
+  }
+
+  .Bio {
+    width: 80vw;
+  }
+
+  .Skills {
+    width: 80vw;
+  }
+} */
+
+
 
 .Footer {
   color: white;
@@ -334,141 +370,6 @@ hr {
   color: cyan;
 }
 
-@media (max-width: 1100px) {
-  .Projects {
-    height: 300vh;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
-  }
-
-  .ProjectRow1 {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .ProjectRow2 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .AboutMe {
-    /* height: 200vh; */
-    width: 80vw;
-  }
-
-  .AboutMe p {
-    width: 80vw;
-  }
-
-  .Bio {
-    width: 80vw;
-  }
-
-  .Skills {
-    width: 80vw;
-  }
-}
-
-@media (max-width: 740px) {
-  .App {
-    height: 100%;
-    align-items: center;
-  }
-
-  .Intro {
-    height: 120vh;
-  }
-
-  .About {
-    height: 170vh;
-    width: 97%;
-    flex-direction: column;
-  }
-
-  .AboutMe {
-    width: 100%;
-    height: 55%;
-  }
-
-  .AboutMe p {
-    display: inline-block;
-    width: 100%;
-  }
-
-  hr {
-    width: 95%;
-  }
-
-  .Skills {
-    height: 35%;
-    width: 97%;
-    flex-direction: column;
-    /* background-color: darkblue; */
-  }
-
-  .SkillsContent {
-    height: 50%;
-  }
-
-  .ProProjectContent {
-    flex-direction: column;
-  }
-
-  .Projects {
-    height: 300vh;
-    flex-direction: column;
-    /* display: flex; */
-    /* justify-content: center; */
-  }
-
-  .ProProjectContent {
-    flex-direction: column;
-    /* height: 1200px; */
-  }
-
-  .ProjectRow1 {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-
-  .ProjectRow2 {
-    flex-direction: column;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
-  }
-
-  .IntroTyping p {
-    font-size: 20px;
-  }
-}
-
-/* @media (max-width: 275px) {
-  .About {
-    height: 1200px;
-  }
-
-  .scrollTop {
-    bottom: 20px;
-  }
-} */
-
-@media (max-width: 375px) {
-  .About {
-    height: 2000px;
-  }
-  .Bio {
-    height: 100%;
-  }
-  .scrollTop {
-    bottom: 20px;
-  }
-}
-
 .scrollTop {
   /* background-color: black; */
   color: cyan;
@@ -502,4 +403,130 @@ hr {
 
 .scrollTop .MuiSvgIcon-root {
   width: 400px;
+}
+
+@media (max-width: 1250px) {
+  .Bio {
+    width: 80vw;
+  }
+
+  .Skills {
+    width: 80vw;
+  }
+
+  .Projects {
+    height: 200vh;
+  }
+}
+
+@media (max-width: 415px) {
+  .About {
+    height: 200vh;
+    justify-content: flex-start;
+  }
+
+  .Bio {
+    /* height: 0%; */
+  }
+
+  .Skills {
+    /* background-color: blue; */
+    justify-content: flex-end;
+  }
+
+  .SkillsContent {
+    margin-top: 10%;
+  }
+
+  .Projects {
+    height: 400vh;
+  }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
+  }
+
+  .NavButtons .MuiButton-label {
+    color: cyan;
+  }
+
+  .SocialButtons .MuiSvgIcon-root {
+    color: cyan;
+  }
+
+  .Footer .MuiButton-label {
+    color: cyan;
+  }
+
+  .Footer .MuiSvgIcon-root {
+    color: cyan;
+  }
+
+  .scrollTop {
+    right: 1%;
+  }
+}
+
+@media (max-width: 376px) {
+  .About {
+    height: 250vh;
+    justify-content: flex-start;
+  }
+
+  .Bio {
+    width: 90vw;
+    /* background-color: blanchedalmond; */
+  }
+
+  .Skills {
+    width: 90vw;
+    height: 60vh;
+  }
+
+  .SkillsList {
+    height: 100%;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .scrollTop {
+    bottom: 20px;
+  }
+
+  .Projects {
+    height: 380vh;
+    flex-direction: column;
+  }
+
+  .ProProjectContent {
+    flex-direction: column;
+  }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
+  }
+
+  .scrollTop {
+    right: 1%;
+  }
 }

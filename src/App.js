@@ -110,43 +110,41 @@ function App() {
 
           <div className="About" ref={aboutRef}>
             <h1>About Me</h1>
-            <div className="AboutMe">
-              <div className="Bio">
-                <h2>{"Bio"}</h2>
-                <p>
-                  My name is Joseph Atlas and I'm currently a full stack
-                  software engineer in Goodyear, Arizona. Although my passion
-                  resides in front end engineering & design, I am experienced
-                  and enjoy working with the full stack in which formulates
-                  today's software.
-                </p>
-                <p>
-                  {" "}
-                  I'm a Northern Arizona University Graduate with a Bachelors of
-                  Science in Computer Information Systems and a certificate in
-                  Enterprise Systems. Since I can remember I have been fiddling
-                  with any sort of technology I could get my hands on, starting
-                  with phones and old laptops -- to today building software,
-                  computers, and even keyboards.
-                </p>{" "}
-                <p>
-                  My passion for front end engineering & design is driven by a
-                  lifetime of not only being subjected to poor application user
-                  experiences, but hearing <strong>others </strong>
-                  complaints of these experiences. This inspired me to create
-                  applications that people find <strong>enjoyable </strong>
-                  and <strong>intuitive </strong> to use. <br /> <br />I hope
-                  you enjoy my portfolio, and if you would like to contact me,
-                  feel free to use the provided methods!
-                </p>
-              </div>
+            <div className="Bio">
+              <h2>{"Bio"}</h2>
+              <p>
+                My name is Joseph Atlas and I'm currently a full stack software
+                engineer in Goodyear, Arizona. Although my passion resides in
+                front end engineering & design, I am experienced and enjoy
+                working with the full stack in which formulates today's
+                software.
+              </p>
+              <p>
+                {" "}
+                I'm a Northern Arizona University Graduate with a Bachelors of
+                Science in Computer Information Systems and a certificate in
+                Enterprise Systems. Since I can remember I have been fiddling
+                with any sort of technology I could get my hands on, starting
+                with phones and old laptops -- to today building software,
+                computers, and even keyboards.
+              </p>{" "}
+              <p>
+                My passion for front end engineering & design is driven by a
+                lifetime of not only being subjected to poor application user
+                experiences, but hearing <strong>others </strong>
+                complaints of these experiences. This inspired me to create
+                applications that people find <strong>enjoyable </strong>
+                and <strong>intuitive </strong> to use. <br /> <br />I hope you
+                enjoy my portfolio, and if you would like to contact me, feel
+                free to use the provided methods!
+              </p>
+              <hr />
             </div>
-            <hr />
 
             <div className="Skills">
               <div className="SkillsContent">
-                <h2>{"Skills"}</h2>
                 <div className="SkillsList">
+                  <h2>{"Skills"}</h2>
                   <div>
                     <div>
                       <strong>{"> Programming Languages: "}</strong>
