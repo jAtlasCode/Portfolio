@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 
 .App {
   display: flex;
@@ -27,7 +27,6 @@ html {
   background-color: rgb(49, 49, 49);
   /* white-space: nowrap;
   overflow: hidden; */
-
 }
 
 .IntroContent {
@@ -38,7 +37,7 @@ html {
 }
 
 .IntroTyping p {
-  border-right: .15em solid cyan;
+  border-right: 0.15em solid cyan;
   font-family: "Source Code Pro";
   font-size: 28px;
   white-space: nowrap;
@@ -59,8 +58,9 @@ html {
   width: 335px;
   /* manually set width */
   opacity: 0;
-  -webkit-animation: type3 5s steps(40, end), blink .5s step-end infinite alternate;
-  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation: type3 5s steps(40, end),
+    blink 0.5s step-end infinite alternate;
+  animation: type3 2s steps(40, end), blink 0.5s step-end infinite alternate;
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
@@ -73,7 +73,7 @@ html {
   }
 
   99.9% {
-    border-right: .15em solid cyan;
+    border-right: 0.15em solid cyan;
   }
 
   100% {
@@ -87,7 +87,7 @@ html {
   }
 
   99.9% {
-    border-right: .15em solid cyan;
+    border-right: 0.15em solid cyan;
   }
 
   100% {
@@ -105,7 +105,7 @@ html {
   }
 
   99.9% {
-    border-right: .15em solid cyan;
+    border-right: 0.15em solid cyan;
   }
 
   100% {
@@ -124,7 +124,7 @@ html {
   }
 
   99.9% {
-    border-right: .15em solid cyan;
+    border-right: 0.15em solid cyan;
   }
 
   100% {
@@ -194,7 +194,7 @@ html {
   /* text-align: center; */
   flex-direction: column;
   align-items: center;
-  height: 50vh;
+  height: 50%;
   width: 60vw;
   line-height: 1.5em;
 }
@@ -365,7 +365,6 @@ hr {
 
   .Bio {
     width: 80vw;
-
   }
 
   .Skills {
@@ -448,16 +447,27 @@ hr {
   }
 }
 
-@media (max-width: 275px) {
+/* @media (max-width: 275px) {
   .About {
-    height: 200vh;
+    height: 1200px;
   }
 
   .scrollTop {
     bottom: 20px;
   }
-}
+} */
 
+@media (max-width: 375px) {
+  .About {
+    height: 2000px;
+  }
+  .Bio {
+    height: 100%;
+  }
+  .scrollTop {
+    bottom: 20px;
+  }
+}
 
 .scrollTop {
   /* background-color: black; */
