@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MatterIntake() {
+export default function Eventsignups() {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
 
@@ -65,18 +65,18 @@ export default function MatterIntake() {
 
   return (
     <div>
-      <Card className={classes.root} id="matterIntakeCard">
+      <Card className={classes.root} id="eventSignupsCard">
         <CardHeader
           // action={
           // }
-          title="Legal Matter Intake Tool"
-          subheader="Advanced Conditional Forms"
+          title="Event Signup Websites"
+          subheader="Responsive website with user info form"
         />
         <CardMedia
           className={classes.media}
-          id="matterIntakeMedia"
+          id="eventSignupMedia"
           image={MitPhoto}
-          title="Matter Intake Tool"
+          title="Event Signup Websites"
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -104,20 +104,12 @@ export default function MatterIntake() {
               <ul>
                 <li>React front-end</li>
                 <li>Express.js server (REST API/ Proxy)</li>
-                <li>Auth0.js + PostgreSQL for RBAC</li>
-                <li>React Context API for global state management</li>
-                <li>Forms built and validated with React-Final-Form</li>
                 <li>SmartSheet (data endpoint)</li>
                 <li>React App Deployed on Netlify</li>
                 <li>Server hosted on AWS EC2</li>
-                <li>Database hosted on AWS RDS</li>
               </ul>
             </Typography>
             <br />
-            {/* <Button
-                variant="contained"
-              >
-              Request Demo</Button> */}
           </CardContent>
         </Collapse>
       </Card>

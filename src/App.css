@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 .App {
   display: flex;
   text-align: center;
@@ -14,8 +16,6 @@ html {
   font-size: 1rem;
 }
 
-
-
 .Intro {
   display: flex;
   height: 100vh;
@@ -25,12 +25,160 @@ html {
   text-align: center;
   color: white;
   background-color: rgb(49, 49, 49);
+  /* white-space: nowrap;
+  overflow: hidden; */
+
 }
+
+.IntroContent {
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+  width: 330px;
+}
+
+.IntroTyping p {
+  border-right: .15em solid cyan;
+  font-family: "Source Code Pro";
+  font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.IntroTyping p:nth-child(1) {
+  margin-left: 20%;
+  width: 200px;
+  /* manually set width */
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.IntroTyping p:nth-child(2) {
+  width: 335px;
+  /* manually set width */
+  opacity: 0;
+  -webkit-animation: type3 5s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  99.9% {
+    border-right: .15em solid cyan;
+  }
+
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+
+  99.9% {
+    border-right: .15em solid cyan;
+  }
+
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {
+    border-right: .15em solid cyan;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {
+    border-right: .15em solid cyan;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
 
 .NavButtons {
   /* padding-top: 5%; */
 }
-
 
 .IntroContent {
   margin-top: 30vh;
@@ -92,14 +240,12 @@ hr {
   width: 45%;
 }
 
-
-
 .Projects {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-content: center;
-  height: 100vh;
+  height: 170vh;
   width: 97vw;
   color: white;
   background-color: rgb(49, 49, 49);
@@ -107,17 +253,31 @@ hr {
   /* padding-bottom: 20%; */
 }
 
-.ProfessionalProjects {
-  /* align-self: center; */
-}
-
 .ProProjectContent {
   display: flex;
-  height: fit-content;
-  flex-direction: row;
+  /* height: 200%; */
+  /* background-color: black; */
+  /* width: 80vw; */
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: flex-start;
-  /* background-color: bisque; */
+  align-items: center;
+}
+
+.ProjectRow1 {
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+}
+
+.ProjectRow2 {
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-evenly;
 }
 
 .Projects ul {
@@ -131,6 +291,7 @@ hr {
   width: 100vw;
   flex-direction: column;
   background-color: rgb(34, 34, 34);
+  position: sticky;
 }
 
 .FooterLinks {
@@ -149,6 +310,10 @@ hr {
 }
 
 .NavButtons .MuiIconButton-label {
+  color: white;
+}
+
+.NavButtons .MuiIconButton-label:hover {
   color: cyan;
 }
 
@@ -195,9 +360,6 @@ hr {
   .AboutMe {
     width: 100%;
     height: 55%;
-    /* margin-left: 3%; */
-    /* text-align: left; */
-    /* background-color: cyan; */
   }
 
   .AboutMe p {
@@ -226,13 +388,27 @@ hr {
 
   .Projects {
     height: 300vh;
+    flex-direction: column;
     /* display: flex; */
     /* justify-content: center; */
   }
 
   .ProProjectContent {
-    display: flex;
-    height: 1200px;
+    flex-direction: column;
+    /* height: 1200px; */
+  }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
   }
 
   #matterIntakeMedia {
@@ -252,4 +428,39 @@ hr {
   #matterIntake {
     /* height: 300px; */
   }
+}
+
+.scrollTop {
+  /* background-color: black; */
+  color: cyan;
+  position: fixed;
+  width: 100%;
+  bottom: 20px;
+  right: 15%;
+  align-items: center;
+  height: 80px;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.2s;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.scrollTop .MuiSvgIcon-root {
+  width: 400px;
 }

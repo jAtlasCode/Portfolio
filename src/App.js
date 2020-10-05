@@ -1,16 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
-import { MemoryRouter as Router, Route } from "react-router";
+import { MemoryRouter as Router } from "react-router";
 import { Button, Grid, IconButton } from "@material-ui/core";
 // import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MatterIntake from "./components/ProjectCards/MatterIntake";
+import Eventsignups from "./components/ProjectCards/Eventsignups";
+import Bookitnow from "./components/ProjectCards/Bookitnow";
 import LegalHub from "./components/ProjectCards/LegalHub";
 import { useStateValue } from "./state";
 import EmailIcon from "@material-ui/icons/Email";
-import { Link, Switch } from "react-router-dom";
 import Pdf from "./docs/Resume.pdf";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -23,6 +25,34 @@ const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 //     marginTop: "5vh",
 //   },
 // }));
+const ScrollArrow = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  window.addEventListener("scroll", checkScrollTop);
+
+  return (
+    <>
+      <ArrowUpwardIcon
+        className="scrollTop"
+        onClick={scrollTop}
+        style={{ height: 40, display: showScroll ? "flex" : "none" }}
+        fontSize="large"
+      />
+    </>
+  );
+};
 
 function App() {
   const [{ theme }, dispatch] = useStateValue();
@@ -30,10 +60,6 @@ function App() {
   // const classes = useStyles();
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const resumeRef = useRef(null);
-
-  // console.log(theme.font)
-  // console.log(theme.font.constructor.name)
 
   const toAbout = () => {
     scrollToRef(aboutRef);
@@ -51,11 +77,14 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollArrow />
         <div className="App" style={theme.app}>
           <div className="Intro" ref={aboutRef}>
             <div className="IntroContent">
-              <h1 style={theme}>Joseph Atlas</h1>
-              <h2>Full-Stack Developer</h2>
+              <div className="IntroTyping">
+                <p>Joseph Atlas</p>
+                <p>Full-Stack Developer</p>
+              </div>
               <div className="NavButtons">
                 <Button size="large" onClick={toAbout}>
                   About
@@ -89,14 +118,18 @@ function App() {
                   software engineer in Goodyear, Arizona. Although my passion
                   resides in front end engineering & design, I am experienced
                   and enjoy working with the full stack in which formulates
-                  today's software. <br />
-                  <br /> I'm a Northern Arizona University Graduate with a
-                  Bachelors of Science in Computer Information Systems and a
-                  certificate in Enterprise Systems. Since I can remember I have
-                  been fiddling with any sort of technology I could get my hands
-                  on, starting with phones and old laptops -- to today building
-                  software, computers and even keyboards. <br />
-                  <br />
+                  today's software.
+                </p>
+                <p>
+                  {" "}
+                  I'm a Northern Arizona University Graduate with a Bachelors of
+                  Science in Computer Information Systems and a certificate in
+                  Enterprise Systems. Since I can remember I have been fiddling
+                  with any sort of technology I could get my hands on, starting
+                  with phones and old laptops -- to today building software,
+                  computers, and even keyboards.
+                </p>{" "}
+                <p>
                   My passion for front end engineering & design is driven by a
                   lifetime of not only being subjected to poor application user
                   experiences, but hearing <strong>others </strong>
@@ -139,6 +172,11 @@ function App() {
                       React Context, Redux, REST, HTTP, JSON
                     </div>
                   </div>
+                  <br />
+                  <div>
+                    <strong>Preferred Stack: </strong>
+                    {"PostgreSQL, Express, React, Node (PERN)"}
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,18 +189,23 @@ function App() {
             <div className="ProfessionalProjects">
               <h2>Professional Projects</h2>
               <div className="ProProjectContent">
-                {/*<MatterIntake />
-                <LegalHub /> */}
+                <div className="ProjectRow1">
+                  <div className="CardHolder">
+                    <MatterIntake />
+                  </div>
+                  <div className="CardHolder">
+                    <LegalHub />
+                  </div>
+                </div>
+                <div className="ProjectRow2">
+                  <div className="CardHolder">
+                    <Bookitnow />
+                  </div>
+                  <div className="CardHolder">
+                    <Eventsignups />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="PersonalProjects">
-              <h2>Personal Projects</h2>
-              <Grid
-                container
-                justify="space-evenly"
-                direction="row"
-                spacing={6}
-              ></Grid>
             </div>
           </div>
           <div className="Footer">

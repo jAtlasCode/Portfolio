@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import MitPhoto from "../../Images/MIT.jpg";
+import Bookitpic from "../../Images/bookit.jpg";
 import "./MatterIntake.css";
 import clsx from "clsx";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MatterIntake() {
+export default function Bookitnow() {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
 
@@ -65,24 +65,24 @@ export default function MatterIntake() {
 
   return (
     <div>
-      <Card className={classes.root} id="matterIntakeCard">
+      <Card className={classes.root} id="bookitnowCard">
         <CardHeader
           // action={
           // }
-          title="Legal Matter Intake Tool"
-          subheader="Advanced Conditional Forms"
+          title="Book it Now!"
+          subheader="Service Industry Appointment Scheduling Application"
         />
         <CardMedia
           className={classes.media}
-          id="matterIntakeMedia"
-          image={MitPhoto}
-          title="Matter Intake Tool"
+          id="bookitnowMedia"
+          image={Bookitpic}
+          title="Book it Now App"
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            Full-stack legal matter submission application. Authentication,
-            Role-Based-Access-Control, conditional form rendering, advanced
-            validation.
+            Full-stack service industry appointment booking application which
+            allows customers to get a quote, and schedule an appointment from
+            anywhere at any time.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
@@ -99,25 +99,21 @@ export default function MatterIntake() {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Details:</Typography>
+            <Typography paragraph>Technology:</Typography>
             <Typography paragraph>
               <ul>
                 <li>React front-end</li>
-                <li>Express.js server (REST API/ Proxy)</li>
-                <li>Auth0.js + PostgreSQL for RBAC</li>
                 <li>React Context API for global state management</li>
-                <li>Forms built and validated with React-Final-Form</li>
-                <li>SmartSheet (data endpoint)</li>
+                <li>Conditional Service Picker</li>
+                <li>Express.js server (REST API/ Proxy)</li>
+                <li>Stripe.js for payments</li>
+                <li>Advanced error handling & validation</li>
                 <li>React App Deployed on Netlify</li>
-                <li>Server hosted on AWS EC2</li>
-                <li>Database hosted on AWS RDS</li>
+                <li>Serverless Server using Netlify Functions</li>
+                <li>Links with ServiceMonster API</li>
               </ul>
             </Typography>
             <br />
-            {/* <Button
-                variant="contained"
-              >
-              Request Demo</Button> */}
           </CardContent>
         </Collapse>
       </Card>
