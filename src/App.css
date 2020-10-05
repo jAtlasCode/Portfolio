@@ -4,6 +4,7 @@
   display: flex;
   text-align: center;
   height: 100%;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -234,10 +235,11 @@ hr {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  height: 170vh;
+  height: 160vh;
   width: 97vw;
   color: white;
   background-color: rgb(49, 49, 49);
+
   /* background-color: black; */
   /* padding-bottom: 20%; */
 }
@@ -248,6 +250,7 @@ hr {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex: 1 0 auto;
 }
 
 .ProjectRow1 {
@@ -271,48 +274,6 @@ hr {
   text-align: left;
 }
 
-
-
-/* 
-@media (max-width: 1100px) {
-  .Projects {
-    height: 300vh;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
-  }
-
-  .ProjectRow1 {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .ProjectRow2 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .AboutMe {
-    width: 80vw;
-  }
-
-  .AboutMe p {
-    width: 80vw;
-  }
-
-  .Bio {
-    width: 80vw;
-  }
-
-  .Skills {
-    width: 80vw;
-  }
-} */
-
-
-
 .Footer {
   color: white;
   display: flex;
@@ -320,7 +281,10 @@ hr {
   width: 100vw;
   flex-direction: column;
   background-color: rgb(34, 34, 34);
-  position: sticky;
+  position: relative;
+  flex-shrink: 0;
+  /* bottom: 0; */
+  margin-top: auto;
 }
 
 .FooterLinks {
@@ -328,10 +292,12 @@ hr {
   height: 70%;
   flex-direction: row;
   justify-content: center;
+
 }
 
 .FooterText {
   height: 30%;
+  padding-bottom: 12px;
 }
 
 .MuiButton-label {
@@ -416,7 +382,24 @@ hr {
 
   .Projects {
     height: 200vh;
+
   }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
+  }
+
 }
 
 @media (max-width: 415px) {
@@ -439,7 +422,7 @@ hr {
   }
 
   .Projects {
-    height: 400vh;
+    height: 350vh;
   }
 
   .ProjectRow1 {
@@ -473,6 +456,10 @@ hr {
 
   .scrollTop {
     right: 1%;
+  }
+
+  .Footer {
+    height: 15vh;
   }
 }
 
@@ -528,5 +515,22 @@ hr {
 
   .scrollTop {
     right: 1%;
+  }
+
+  .IntroContent {
+    width: 280px;
+    align-items: center;
+  }
+
+  .IntroTyping p {
+    font-size: 22px;
+  }
+
+  .IntroTyping p:nth-child(1) {
+    width: 170px;
+  }
+
+  .IntroTyping p:nth-child(2) {
+    width: 280px;
   }
 }
