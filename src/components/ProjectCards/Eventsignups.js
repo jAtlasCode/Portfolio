@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import MitPhoto from "../../Images/MIT.jpg";
+import Signuppic from "../../Images/signup2.jpg";
 import "./MatterIntake.css";
 import clsx from "clsx";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -70,19 +70,19 @@ export default function Eventsignups() {
           // action={
           // }
           title="Event Signup Websites"
-          subheader="Responsive website with user info form"
+          subheader="Responsive React website updated consistently for capturing user information"
         />
         <CardMedia
           className={classes.media}
           id="eventSignupMedia"
-          image={MitPhoto}
+          image={Signuppic}
           title="Event Signup Websites"
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            Full-stack legal matter submission application. Authentication,
-            Role-Based-Access-Control, conditional form rendering, advanced
-            validation.
+            Multiple responsive websites with validated forms to capture user
+            information for event pre-registration. Outputs to a cloud
+            spreadsheet.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
@@ -106,7 +106,7 @@ export default function Eventsignups() {
                 <li>Express.js server (REST API/ Proxy)</li>
                 <li>SmartSheet (data endpoint)</li>
                 <li>React App Deployed on Netlify</li>
-                <li>Server hosted on AWS EC2</li>
+                <li>{"Server deployed with Netlify Functions (Serverless)"}</li>
               </ul>
             </Typography>
             <br />

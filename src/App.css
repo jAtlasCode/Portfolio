@@ -173,13 +173,6 @@ html {
   }
 }
 
-
-
-
-.NavButtons {
-  /* padding-top: 5%; */
-}
-
 .IntroContent {
   margin-top: 30vh;
 }
@@ -202,7 +195,7 @@ html {
   flex-direction: column;
   align-items: center;
   height: 50vh;
-  width: 60%;
+  width: 60vw;
   line-height: 1.5em;
 }
 
@@ -341,6 +334,45 @@ hr {
   color: cyan;
 }
 
+@media (max-width: 1100px) {
+  .Projects {
+    height: 300vh;
+  }
+
+  .CardHolder {
+    margin-bottom: 10%;
+  }
+
+  .ProjectRow1 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .ProjectRow2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AboutMe {
+    /* height: 200vh; */
+    width: 80vw;
+  }
+
+  .AboutMe p {
+    width: 80vw;
+  }
+
+  .Bio {
+    width: 80vw;
+
+  }
+
+  .Skills {
+    width: 80vw;
+  }
+}
+
 @media (max-width: 740px) {
   .App {
     height: 100%;
@@ -411,24 +443,21 @@ hr {
     margin-bottom: 10%;
   }
 
-  #matterIntakeMedia {
-    padding-top: 0%;
-    height: 200px;
-  }
-
-  #matterIntakeCard {
-    /* padding-bottom: 5; */
-  }
-
-  #legalHubCard {
-    height: 400px;
-    /* padding-top: 5%; */
-  }
-
-  #matterIntake {
-    /* height: 300px; */
+  .IntroTyping p {
+    font-size: 20px;
   }
 }
+
+@media (max-width: 275px) {
+  .About {
+    height: 200vh;
+  }
+
+  .scrollTop {
+    bottom: 20px;
+  }
+}
+
 
 .scrollTop {
   /* background-color: black; */

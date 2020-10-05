@@ -70,7 +70,7 @@ export default function MatterIntake() {
           // action={
           // }
           title="Legal Custom Tool Hub"
-          subheader="Responsive React Website"
+          subheader="Responsive React website"
         />
         <CardMedia
           className={classes.media}

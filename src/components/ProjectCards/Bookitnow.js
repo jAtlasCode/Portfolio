@@ -109,7 +109,6 @@ export default function Bookitnow() {
                 <li>Stripe.js for payments</li>
                 <li>Advanced error handling & validation</li>
                 <li>React App Deployed on Netlify</li>
-                <li>Serverless Server using Netlify Functions</li>
                 <li>Links with ServiceMonster API</li>
               </ul>
             </Typography>
