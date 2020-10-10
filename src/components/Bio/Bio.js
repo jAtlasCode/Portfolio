@@ -13,7 +13,7 @@ const Bio = () => {
       </p>
       <p>
         {" "}
-        I'm a Northern Arizona University Graduate with a Bachelors of Science
+        I'm a Northern Arizona University graduate with a Bachelors of Science
         in Computer Information Systems and a certificate in Enterprise Systems.
         Since I can remember I have been fiddling with any sort of technology I
         could get my hands on, starting with phones and old laptops -- to today
