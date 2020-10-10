@@ -1,0 +1,22 @@
+.Bio {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 50%;
+  width: 40vw;
+  line-height: 1.5em;
+}
+
+@media (max-width: 1250px) {
+  .Bio {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 376px) {
+  .Bio {
+    width: 90vw;
+    /* background-color: blanchedalmond; */
+  }
+}

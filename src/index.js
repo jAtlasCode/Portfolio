@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import themes from './themes/themes'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+// import themes from './themes/themes'
 
-import { StateProvider } from './state.js'
+import { StateProvider } from "./state.js";
 
 // export const darkTheme = {
 //   main: {
@@ -30,49 +30,46 @@ import { StateProvider } from './state.js'
 //   whiteFont: { color: 'white' },
 // }
 
-const white = "#FFFFFF"
-const black = "#1161617"
-const gray = "#f8f8f9"
+// const white = "#FFFFFF";
+const black = "#1161617";
+const gray = "#f8f8f9";
 
 const lightTheme = {
   background: gray,
-  body: black
-}
+  body: black,
+};
 
-const darkTheme = {
-  background: black,
-  body: white
-}
+// const darkTheme = {
+//   background: black,
+//   body: white,
+// };
 
-const themeSetter = mode => (mode === "dark" ? darkTheme : lightTheme)
+// const themeSetter = (mode) => (mode === "dark" ? darkTheme : lightTheme);
 
 export default function Index() {
-
-let initialState = {
-  userData:{
-    id:'',
-    name: ''
-  },
-  theme: {
+  let initialState = {
+    userData: {
+      id: "",
+      name: "",
+    },
+    theme: {
       themeColor: lightTheme,
-  }
-}
+    },
+  };
 
+  // const { user } = useAuth0()
 
-
-// const { user } = useAuth0()
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'editTheme':
-      return {
-        ...state,
-        theme: action.theme
-      }
-    default:
-      return state;
-  }
-}
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "editTheme":
+        return {
+          ...state,
+          theme: action.theme,
+        };
+      default:
+        return state;
+    }
+  };
 
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
@@ -81,6 +78,6 @@ const reducer = (state, action) => {
   );
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById("root"));
 
 serviceWorker.unregister();

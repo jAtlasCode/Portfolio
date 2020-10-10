@@ -1,0 +1,16 @@
+.SocialButtons .MuiSvgIcon-root {
+  color: white;
+}
+
+.SocialButtons .MuiSvgIcon-root:hover {
+  color: cyan;
+}
+
+@media (max-width: 1250px) {
+  .SocialButtons .MuiIconButton-label{
+    color: cyan;
+  }
+  .SocialButtons .MuiSvgIcon-root {
+    color: cyan;
+  }
+}

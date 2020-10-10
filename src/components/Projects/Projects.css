@@ -1,0 +1,45 @@
+.CardHolder {
+  display: flex;
+  width: 35%;
+  height: 45%;
+  /* background-color: brown; */
+}
+
+.CardHolder ul {
+  text-align: left;
+}
+
+@media (max-width: 1250px) {
+  .CardHolder {
+    /* margin-bottom: 10%; */
+    width: 40%;
+    height: 45%;
+  }
+}
+
+@media (max-width: 415px) {
+  .CardHolder {
+    width: 90%;
+    height: fit-content;
+    /* margin-bottom: 5%; */
+  }
+  li {
+    margin: 5px 0;
+  }
+  
+}
+
+@media (max-width: 376px) {
+  .ProfessionalProjects {
+    flex-direction: column;
+  }
+
+  .CardHolder {
+    width: 95%;
+    height: fit-content;
+    /* margin-bottom: 5%; */
+  }
+  li {
+    margin: 5px 0;
+  }
+}

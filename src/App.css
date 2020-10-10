@@ -26,8 +26,6 @@ html {
   text-align: center;
   color: white;
   background-color: rgb(49, 49, 49);
-  /* white-space: nowrap;
-  overflow: hidden; */
 }
 
 .IntroContent {
@@ -190,16 +188,6 @@ html {
   background-color: rgb(49, 49, 49);
 }
 
-.Bio {
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  /* align-items: center; */
-  height: 50%;
-  width: 40vw;
-  line-height: 1.5em;
-}
-
 .Skills {
   display: flex;
   flex-direction: column;
@@ -209,25 +197,9 @@ html {
   /* background-color: darkcyan; */
 }
 
-.SkillsContent {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-  width: 100%;
-  height: 100%;
-}
-
-.SkillsList {
-  display: flex;
-  height: 50%;
-  flex-direction: column;
-  line-height: 2rem;
-  /* background-color: darkgreen; */
-}
-
 hr {
   width: 100%;
+  background-color: black;
 }
 
 .Projects {
@@ -235,43 +207,29 @@ hr {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  height: 160vh;
+  height: 100vh;
   width: 97vw;
   color: white;
   background-color: rgb(49, 49, 49);
-
   /* background-color: black; */
-  /* padding-bottom: 20%; */
 }
 
-.ProProjectContent {
+.ProfessionalProjects {
+  margin-top: 5%;
   display: flex;
-  margin-top: 3%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 1 0 auto;
-}
-
-.ProjectRow1 {
-  display: flex;
-  height: 50%;
   flex-direction: row;
-  width: 80vw;
+  height: 100%;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 10%;
+  /* background-color: black; */
 }
 
-.ProjectRow2 {
-  display: flex;
-  height: 50%;
-  flex-direction: row;
-  width: 80vw;
-  justify-content: space-evenly;
+.NavButtons .MuiIconButton-label {
+  color: white;
 }
 
-.Projects ul {
-  text-align: left;
+.NavButtons .MuiIconButton-label:hover {
+  color: cyan;
 }
 
 .Footer {
@@ -285,31 +243,6 @@ hr {
   flex-shrink: 0;
   /* bottom: 0; */
   margin-top: auto;
-}
-
-.FooterLinks {
-  display: flex;
-  height: 70%;
-  flex-direction: row;
-  justify-content: center;
-
-}
-
-.FooterText {
-  height: 30%;
-  padding-bottom: 12px;
-}
-
-.MuiButton-label {
-  color: white;
-}
-
-.NavButtons .MuiIconButton-label {
-  color: white;
-}
-
-.NavButtons .MuiIconButton-label:hover {
-  color: cyan;
 }
 
 .Footer .MuiIconButton-label {
@@ -332,6 +265,10 @@ hr {
   color: rgb(49, 49, 49);
 }
 
+.NavButtons .MuiButton-label {
+  color: white;
+}
+
 .NavButtons .MuiButton-label:hover {
   color: cyan;
 }
@@ -342,7 +279,7 @@ hr {
   position: fixed;
   width: 100%;
   bottom: 20px;
-  right: 15%;
+  right: 3%;
   align-items: center;
   height: 80px;
   justify-content: center;
@@ -372,34 +309,15 @@ hr {
 }
 
 @media (max-width: 1250px) {
-  .Bio {
-    width: 80vw;
-  }
-
   .Skills {
     width: 80vw;
   }
-
   .Projects {
-    height: 200vh;
-
+    height: 90vh;
   }
-
-  .ProjectRow1 {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
+  .NavButtons .MuiButton-label {
+    color: cyan;
   }
-
-  .ProjectRow2 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
-  }
-
 }
 
 @media (max-width: 415px) {
@@ -408,58 +326,27 @@ hr {
     justify-content: flex-start;
   }
 
-  .Bio {
-    /* height: 0%; */
-  }
-
   .Skills {
     /* background-color: blue; */
     justify-content: flex-end;
   }
 
-  .SkillsContent {
-    margin-top: 10%;
-  }
-
   .Projects {
-    height: 350vh;
+    height: 300vh;
   }
-
-  .ProjectRow1 {
+  .ProfessionalProjects {
     flex-direction: column;
-    margin-bottom: 0;
-  }
-
-  .ProjectRow2 {
-    flex-direction: column;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
   }
 
   .NavButtons .MuiButton-label {
     color: cyan;
   }
 
-  .SocialButtons .MuiSvgIcon-root {
-    color: cyan;
-  }
-
-  .Footer .MuiButton-label {
-    color: cyan;
-  }
-
-  .Footer .MuiSvgIcon-root {
-    color: cyan;
-  }
-
   .scrollTop {
     right: 1%;
-  }
-
-  .Footer {
-    height: 15vh;
   }
 }
 
@@ -469,18 +356,9 @@ hr {
     justify-content: flex-start;
   }
 
-  .Bio {
-    width: 90vw;
-    /* background-color: blanchedalmond; */
-  }
-
   .Skills {
     width: 90vw;
     height: 60vh;
-  }
-
-  .SkillsList {
-    height: 100%;
   }
 
   hr {
@@ -492,25 +370,8 @@ hr {
   }
 
   .Projects {
-    height: 380vh;
+    height: 330vh;
     flex-direction: column;
-  }
-
-  .ProProjectContent {
-    flex-direction: column;
-  }
-
-  .ProjectRow1 {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-
-  .ProjectRow2 {
-    flex-direction: column;
-  }
-
-  .CardHolder {
-    margin-bottom: 10%;
   }
 
   .scrollTop {
