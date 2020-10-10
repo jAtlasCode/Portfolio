@@ -53,6 +53,7 @@ const Projects = () => {
         "React Context API global state.",
         "Forms built & validated using React-Final-Form",
         "SmartSheet cloud spreadsheet as data endpoint.",
+        "Load balanced using NGINX",
         "Setup in continuous deployment using Netlify + AWS",
       ],
     },
