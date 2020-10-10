@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { MemoryRouter as Router } from "react-router";
+import { Router } from "react-router";
+import history from "./history";
 import { Button } from "@material-ui/core";
 import Projects from "./components/Projects/Projects";
 import { useStateValue } from "./state";
@@ -9,6 +10,7 @@ import Skills from "./components/Skills/Skills";
 import Bio from "./components/Bio/Bio";
 import SocialButtons from "./components/SocialButtons/SocialButtons";
 import Footer from "./components/Footer/Footer";
+import ReactGA from "react-ga";
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 const ScrollArrow = () => {
@@ -56,6 +58,15 @@ function App() {
     scrollToRef(projectsRef);
   };
 
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log(window.location.pathname);
+  }, []);
   // const handle = () => {
   //   dispatch({ type: "editTheme", theme: { mode: "dark" } });
   //   console.log(theme);
@@ -63,7 +74,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router history={history}>
         <ScrollArrow />
         <div className="App" style={theme.app}>
           <div className="Intro" ref={aboutRef}>
