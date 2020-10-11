@@ -65,7 +65,6 @@ function App() {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
-    console.log(window.location.pathname);
   }, []);
   // const handle = () => {
   //   dispatch({ type: "editTheme", theme: { mode: "dark" } });
@@ -106,10 +105,9 @@ function App() {
 
           <div className="Projects" ref={projectsRef}>
             <h2>Projects</h2>
-            <div className="ProfessionalProjects">
-              <Projects />
-            </div>
+            <Projects />
           </div>
+
           <Footer />
         </div>
       </Router>

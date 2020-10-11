@@ -111,35 +111,38 @@ const Projects = () => {
   ];
   return (
     <>
-      {cards.map((c, i) => (
-        <div className="CardHolder" key={i}>
-          <Card className={c.className} id={c.id}>
-            <CardContent>
-              <Typography
-                className={c.title}
-                color="textPrimary"
-                component="h2"
-              >
-                {c.titleText}
-              </Typography>
-              <Typography
-                variant="body2"
-                component="p"
-                className={classes.detailsP}
-              >
-                {c.details}
-              </Typography>
-              <hr className={classes.hr} />
-              <Typography>{"Tech Stack & Details"}</Typography>
-              <ul>
-                {c.tech.map((t, i) => (
-                  <li key={i}>{t}</li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-      ))}
+      <div className="ProjectCardsContainer">
+        {" "}
+        {cards.map((c, i) => (
+          <div className="CardHolder" key={i}>
+            <Card className={c.className} id={c.id}>
+              <CardContent>
+                <Typography
+                  className={c.title}
+                  color="textPrimary"
+                  component="h2"
+                >
+                  {c.titleText}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  component="p"
+                  className={classes.detailsP}
+                >
+                  {c.details}
+                </Typography>
+                <hr className={classes.hr} />
+                <Typography>{"Tech Stack & Details"}</Typography>
+                <ul>
+                  {c.tech.map((t, i) => (
+                    <li key={i}>{t}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

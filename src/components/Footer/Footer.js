@@ -4,6 +4,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { IconButton, Button } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
 import Pdf from "../../docs/Resume.pdf";
+import "./footer.css";
 
 const Footer = () => {
   return (

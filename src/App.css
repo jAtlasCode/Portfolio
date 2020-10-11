@@ -181,23 +181,30 @@ html {
   flex-direction: column;
   text-align: left;
   align-items: center;
-  justify-content: space-between;
-  height: 100vh;
+  /* justify-content: space-between; */
+  min-height: 100vh;
   width: 97vw;
   color: white;
-  background-color: rgb(49, 49, 49);
+  background-color: rgba(77, 77, 77, 0.198)
+  /* background-color: black; */
+}
+
+.About h1 {
+  padding-top: 25px;
 }
 
 .Skills {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  height: 45%;
+  margin-top: 50px;
+  /* height: 45%; */
   justify-content: flex-start;
   /* background-color: darkcyan; */
 }
 
 hr {
+  margin-top: 50px;
   width: 100%;
   background-color: black;
 }
@@ -207,20 +214,11 @@ hr {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 97vw;
   color: white;
   background-color: rgb(49, 49, 49);
-  /* background-color: black; */
-}
-
-.ProfessionalProjects {
   margin-top: 5%;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   /* background-color: black; */
 }
 
@@ -313,7 +311,7 @@ hr {
     width: 80vw;
   }
   .Projects {
-    height: 90vh;
+    /* height: 90vh; */
   }
   .NavButtons .MuiButton-label {
     color: cyan;
@@ -322,8 +320,9 @@ hr {
 
 @media (max-width: 415px) {
   .About {
-    height: 200vh;
+    /* height: 200vh; */
     justify-content: flex-start;
+    margin-bottom: 25px;
   }
 
   .Skills {
@@ -332,15 +331,9 @@ hr {
   }
 
   .Projects {
-    height: 300vh;
+    /* height: 300vh; */
   }
-  .ProfessionalProjects {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-  }
-
+  
   .NavButtons .MuiButton-label {
     color: cyan;
   }
@@ -352,13 +345,11 @@ hr {
 
 @media (max-width: 376px) {
   .About {
-    height: 250vh;
     justify-content: flex-start;
   }
 
   .Skills {
     width: 90vw;
-    height: 60vh;
   }
 
   hr {
@@ -370,7 +361,8 @@ hr {
   }
 
   .Projects {
-    height: 330vh;
+    /* height: 330vh; */
+    /* height: fit-content; */
     flex-direction: column;
   }
 
