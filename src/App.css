@@ -185,7 +185,8 @@ html {
   min-height: 100vh;
   width: 97vw;
   color: white;
-  background-color: rgba(77, 77, 77, 0.198)
+  background-color: rgba(77, 77, 77, 0.198);
+  
   /* background-color: black; */
 }
 
@@ -198,6 +199,7 @@ html {
   flex-direction: column;
   width: 40vw;
   margin-top: 50px;
+  padding-bottom: 50px;
   /* height: 45%; */
   justify-content: flex-start;
   /* background-color: darkcyan; */

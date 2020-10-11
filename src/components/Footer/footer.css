@@ -18,6 +18,8 @@
   color: white;
 }
 
+
+
 @media (max-width: 1250px) {
   .Footer .MuiButton-label {
     color: cyan;
@@ -30,6 +32,6 @@
   }
 }
 
-@media (max-width: 376px) {
+/* @media (max-width: 376px) {
 
-}
+} */
