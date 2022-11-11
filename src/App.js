@@ -46,7 +46,6 @@ function App() {
   // eslint-disable-next-line
   const [{ theme }, dispatch] = useStateValue();
 
-  // const classes = useStyles();
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
 
@@ -66,10 +65,6 @@ function App() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   }, []);
-  // const handle = () => {
-  //   dispatch({ type: "editTheme", theme: { mode: "dark" } });
-  //   console.log(theme);
-  // };
 
   return (
     <>
@@ -87,7 +82,7 @@ function App() {
                   About
                 </Button>
                 <Button size="large" onClick={toProjects}>
-                  Projects
+                  Professional Projects
                 </Button>
                 <SocialButtons />
               </div>

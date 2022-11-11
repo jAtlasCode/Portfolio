@@ -11,7 +11,7 @@ const Projects = () => {
       minWidth: 275,
       maxWidth: "100%",
       justifyContent: "center",
-      backgroundColor: "#c4c4c4",
+      backgroundColor: "#c2c2c2",
     },
     bullet: {
       display: "inline-block",
@@ -38,6 +38,24 @@ const Projects = () => {
   const classes = useStyles();
   const cards = [
     {
+      id: "csarCard",
+      className: classes.root,
+      title: classes.title,
+      titleText: "Cyber Security Readiness App",
+      pos: classes.pos,
+      bullet: classes.bullet,
+      details:
+        "Helps consolidate and automate the process of getting applications secured and certified for use in the government sector",
+      tech: [
+        "Frontend: React + TypeScript",
+        "UI Components: Ant Design",
+        "Visualization Libraries: Ant Design",
+        "Authentication: JWT / custom",
+        "Backend / API: Python + Flask + GraphQL",
+        "Database: PostgreSQL",
+      ],
+    },
+    {
       id: "matterIntakeCard",
       className: classes.root,
       title: classes.title,
@@ -45,16 +63,16 @@ const Projects = () => {
       pos: classes.pos,
       bullet: classes.bullet,
       details:
-        "Authenticated making use of Role-Based-Access-Control, this application provides conditionally rendered forms and cuts down matter submission man-hours by providing all required matter template types in one form.",
+        "Authenticated making use of Role-Based-Access-Control, this application provides conditionally rendered forms and cuts down matter submission man-hours by providing all required matter template types in one form",
+
       tech: [
-        "React front-end",
-        "Express/ Node server for REST API + proxy",
-        "Auth0 + PostgreSQL as database & provides RBAC",
-        "React Context API global state.",
-        "Forms built & validated using React-Final-Form",
-        "SmartSheet cloud spreadsheet as data endpoint.",
-        "Load balanced using NGINX",
-        "Setup in continuous deployment using Netlify + AWS",
+        "Frontend: React",
+        "UI Components: Material UI",
+        "Backend / API: Node + Express + NGINX",
+        "Authentication: Auth0",
+        "Database: PostgreSQL",
+        "Deployment: CD using AWS + Netlify",
+        "Misc: Outputs data to cloud spreadsheet (Smart sheet)",
       ],
     },
     {
@@ -84,7 +102,7 @@ const Projects = () => {
       pos: classes.pos,
       bullet: classes.bullet,
       details:
-        "Fully responsive & authenticated portal; provides news & events, documents, and custom tools to both internal and external users.",
+        "Fully responsive & authenticated portal; provides news & events, documents, and custom tools to both internal and external users",
       tech: [
         "React front-end",
         "Authenticated with Auth0.js",
@@ -112,7 +130,6 @@ const Projects = () => {
   return (
     <>
       <div className="ProjectCardsContainer">
-        {" "}
         {cards.map((c, i) => (
           <div className="CardHolder" key={i}>
             <Card className={c.className} id={c.id}>
@@ -133,7 +150,7 @@ const Projects = () => {
                 </Typography>
                 <hr className={classes.hr} />
                 <Typography>{"Tech Stack & Details"}</Typography>
-                <ul>
+                <ul style={{ paddingLeft: 20 }}>
                   {c.tech.map((t, i) => (
                     <li key={i}>{t}</li>
                   ))}
